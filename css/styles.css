@@ -230,3 +230,61 @@ footer {
 .download-btn button {
     animation: button-appear 0.6s ease-out;
 }
+
+/* skills */
+
+.skills-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill-item i {
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+/* welcome to my portfolio */
+
+#home {
+    background-color: #282c34; /* Dark background for contrast */
+    color: white; /* White text for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full screen height */
+    padding: 20px;
+}
+
+#home h2 {
+    font-size: 3rem; /* Large font size */
+    font-weight: bold;
+    letter-spacing: 2px; /* Spacing between letters */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    animation: fadeIn 2s ease-in-out; /* Smooth fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

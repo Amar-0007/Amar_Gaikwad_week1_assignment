@@ -1,14 +1,19 @@
-// Responsive Navigation Menu (Burger Menu Toggle)
-const burger = document.getElementById('burger');
-const navLinks = document.getElementById('navLinks');
-
-burger.addEventListener('click', () => {
-    navLinks.classList.toggle('nav-active');
-    burger.classList.toggle('toggle');
-});
-
-// Sticky Header with Scroll Effect
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    header.classList.toggle('sticky-header', window.scrollY > 50);
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor click behavior
+            
+            const targetId = this.getAttribute('href').substring(1); // Get target section ID
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth' // Smooth scrolling
+                });
+            }
+        });
+    });
 });
